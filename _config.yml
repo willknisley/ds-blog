@@ -1,13 +1,13 @@
 ## You should change each of the following fields
 ## to customize your blog
 
-title: Stat 386 Blog
+title: "Stat 386 Blog"
 description: "This is a blog about interesting ways to use data science." 
-author: Will Knisley
+author: "Will Knisley"
 author_description: "Stat 386" 
 
-url: https://willknisley.github.io ## change this to https://yourusername.github.io
-baseurl: https://github.com/willknisley/blog ## change this to the name of your blog repository
+url: "https://willknisley.github.io" ## change this to https://yourusername.github.io
+baseurl: "/ds-blog" ## change this to the name of your blog repository
 header_image: /assets/img/headerimg.jpg ## change your header image if you want
 
 ## Add your social media user names.  Github is required, the rest are optional
