@@ -123,10 +123,11 @@ plt.title("Composite Climate Scores for Each City")
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-plt.savefig("composite_scores.png")
-plt.close()
-```
+plt.savefig('assets/img/composite_score.png', bbox_inches='tight')
+plt.show()
 
+```
+![Composite Score](assets/img/composite_score.png)
     
 
 
@@ -147,12 +148,10 @@ plt.title("Wind Speed for Each City with Lowest in Red")
 plt.xticks(rotation=45)
 plt.tight_layout()
 
+plt.savefig('assets/img/wind_speed.png', bbox_inches='tight')  # Save the plot
 plt.show()
 ```
-
-
-    
-![png](output_16_0.png)
+![Wind Speed](assets/img/wind_speed.png)
     
 
 
@@ -182,12 +181,10 @@ plt.title("Sky Coverage for Each City")
 plt.xticks(rotation=45)
 plt.tight_layout()
 
+plt.savefig('assets/img/sky_coverage.png', bbox_inches='tight')  # Save the plot
 plt.show()
 ```
-
-
-    
-![png](output_19_0.png)
+![Sky Coverage](assets/img/sky_coverage.png)
     
 
 
