@@ -1,14 +1,11 @@
-```python
-```
 ---
 layout: post
-title: "Warmest Climate in the West"
-description: "Data Science Blog post on finding the city with the warmest climate in the west"
-image: /assets/img/blog-image.jpg
+title:  "Warmest Climate in the West"
+date: 2024-11-14
+description: Data Science Blog post on finding the city with the warmest climate in the west 
+image: "/assets/img/image5.jpg"
+display_image: false  # change this to true to display the image below the banner 
 ---
-```
-
-```
 
 Finding a place to live in the west can be difficult, especially since weather can vary so much. I wanted to find what major city had the warmest climate.
 
@@ -126,12 +123,10 @@ plt.title("Composite Climate Scores for Each City")
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-plt.show()
+plt.savefig("composite_scores.png")
+plt.close()
 ```
 
-
-    
-![png](output_14_0.png)
     
 
 
