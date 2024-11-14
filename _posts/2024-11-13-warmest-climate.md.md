@@ -2,7 +2,7 @@
 ```
 ---
 layout: post
-title:  "Warmest Climate in the West"
+title: "Warmest Climate in the West"
 description: "Data Science Blog post on finding the city with the warmest climate in the west"
 image: /assets/img/blog-image.jpg
 ---
