@@ -127,7 +127,7 @@ plt.savefig('assets/img/composite_score.png', bbox_inches='tight')
 plt.show()
 
 ```
-![Composite Score](/assets/img/composite_score.png)
+![Composite Score](/ds-blog/assets/img/composite_score.png)
     
 
 
@@ -151,7 +151,7 @@ plt.tight_layout()
 plt.savefig('assets/img/wind_speed.png', bbox_inches='tight')  # Save the plot
 plt.show()
 ```
-![Wind Speed](/assets/img/wind_speed.png)
+![Wind Speed](/ds-blog/assets/img/wind_speed.png)
     
 
 
@@ -184,7 +184,7 @@ plt.tight_layout()
 plt.savefig('assets/img/sky_coverage.png', bbox_inches='tight')  # Save the plot
 plt.show()
 ```
-![Sky Coverage](/assets/img/sky_coverage.png)
+![Sky Coverage](/ds-blog/assets/img/sky_coverage.png)
     
 
 
