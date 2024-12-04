@@ -195,4 +195,4 @@ In conclusion, based on the data we gathered and the analysis we did, it seems l
 For those interested in the dataset I used, it had 14 cities, 2 categorical variables, and 5 numerical variables. This dataset could have been expanded further, but it did have enough data to do some interesting analysis. Unfortunately the weather variable was not very useful, so it was not used in this analysis. The data gathered was also from 11/13/2024 at 11:00 P.M., which could affect the analysis, however this was the data available from the API.
 
 If you're interested in all of the code used to create this post, I'll include a link to the github repository where it's located.
-https://github.com/willknisley/blog2
+[Visit my GitHub blog](https://github.com/willknisley/blog2/)
