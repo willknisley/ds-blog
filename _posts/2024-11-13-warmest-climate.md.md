@@ -6,33 +6,21 @@ description: Data Science Blog post on finding the city with the warmest climate
 image: "/assets/img/image5.jpg"
 display_image: false  # change this to true to display the image below the banner 
 ---
+## Introduction
 
 Finding a place to live in the west can be difficult, especially since weather can vary so much. I wanted to find what major city had the warmest climate.
 
-In order to get this data I used the Xweather API. I was required to sign up for a free developer account, and stayed under the request limit. In order to keep my data gathering ethical I also paused between requests as they request.
+## Data Collection and Ethics
 
-In order to get this data you'll need to go to Xweather and sign up for their free developer account so you can access their API.
+In order to get this data I used the Xweather API. I was required to sign up for a free developer account, and stayed under the request limit. In order to keep my data gathering ethical I also paused between requests as they request, and made sure to accurately represent the data I acquired.
+
 
 To get the dataset you'll need to decide on the cities and weather keywords you want to use.
 
 
-```python
-cities = [
-    "salt lake city, ut", "denver, co", "boise, id", "spokane, wa", "reno, nv",
-    "phoenix, az", "las vegas, nv", "los angeles, ca", "san francisco, ca",
-    "seattle, wa", "portland, or", "sacramento, ca", "fresno, ca", "tucson, az",
-    "albuquerque, nm", "cheyenne, wy", "helena, mt", "billings, mt", "missoula, mt",
-    "bend, or", "medford, or", "bakersfield, ca", "stockton, ca", "riverside, ca",
-    "pueblo, co", "elko, nv", "flagstaff, az", "great falls, mt", "idaho falls, id"
-]
-
-weather_keywords = ["rain", "snow", "drizzle", "thunder", "storm", "cloudy", "windy"]
-```
-
-This is an example of what I used in order to get my dataset.
-
 You can then query the API with this data, add the results to a dataframe, and start analyzing the data.
 
+## Exploratory Data Analysis
 
 ```python
 import pandas as pd
@@ -105,28 +93,6 @@ print(f"The city with the warmest climate based on temperature, feels-like, and 
 We can then graph the composite score for all the cities and get a better picture of how they compare.
 
 
-```python
-plt.figure(figsize=(12, 8))
-bars = plt.bar(df['city'], df['composite_score'], color='lightblue')
-
-max_bar = bars[df['composite_score'].idxmax()]
-max_bar.set_color('red')
-
-plt.text(df['city'][df['composite_score'].idxmax()],
-         warmest_score + 0.1,
-         f"{warmest_city}\n{warmest_score:.2f}",
-         ha='center', va='bottom', color='black')
-
-plt.xlabel("City")
-plt.ylabel("Composite Score")
-plt.title("Composite Climate Scores for Each City")
-plt.xticks(rotation=45)
-plt.tight_layout()
-
-plt.savefig('assets/img/composite_score.png', bbox_inches='tight')
-plt.show()
-
-```
 ![Composite Score](/ds-blog/assets/img/composite_score.png)
     
 
@@ -160,35 +126,13 @@ Based on this we can see that although boise has the lowest wind speed, our earl
 We can also look at sky coverage to get an idea of which cities would be the sunniest.
 
 
-```python
-max_sky_value = df['sky'].max()
-max_sky_city = df[df['sky'] == max_sky_value]['city'].iloc[0]
-
-plt.figure(figsize=(12, 6))
-bars = plt.bar(df['city'], df['sky'], color='lightblue')
-
-min_bar = bars[df['sky'].idxmin()]
-min_bar.set_color('red')
-
-plt.text(df['city'][df['sky'].idxmax()],
-         max_sky_value + 1,
-         f"{max_sky_city}\n{max_sky_value}",
-         ha='center', va='bottom', color='black')
-
-plt.xlabel("City")
-plt.ylabel("Sky Coverage (%)")
-plt.title("Sky Coverage for Each City")
-plt.xticks(rotation=45)
-plt.tight_layout()
-
-plt.savefig('assets/img/sky_coverage.png', bbox_inches='tight')  # Save the plot
-plt.show()
-```
 ![Sky Coverage](/ds-blog/assets/img/sky_coverage.png)
     
 
 
 Based on the graph we can see that reno has the lowest cloud coverage, and that san francisco also has lower cloud coverage.
+
+## Conclusion
 
 In conclusion, based on the data we gathered and the analysis we did, it seems like San Francisco has the warmest climate of the cities we looked at. A warm climate might be a positive or negative depending on your outlook, but for those moving to the west looking for warmer weather, San Francisco could be the place.
 
