@@ -37,4 +37,4 @@ To provide some additional insight into this dataset I've created a streamlit ap
 
 There are lots of insights to be pulled from this climate dataset, and it can be a great resource for someone looking to find their ideal city in the West. The streamlit app I've created will hopefully encourage others to experiment with this dataset. Those looking to explore this data with even more cities can through the app, and might be able to discover new and exciting insights. 
 
-If you're interested in seeing the code I used to creating the visuals and the streamlit app check out [my github repository]()
+If you're interested in seeing the code I used to creating the visuals and the streamlit app check out [my github repository](https://github.com/willknisley/blog2/tree/main/post_3)
